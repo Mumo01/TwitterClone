@@ -1,0 +1,80 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-twitterclone-dev-142615-authRole",
+      "UnauthRoleArn": "arn:aws:iam::656396328676:role/amplify-twitterclone-dev-142615-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::656396328676:role/amplify-twitterclone-dev-142615-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-twitterclone-dev-142615-deployment",
+      "UnauthRoleName": "amplify-twitterclone-dev-142615-unauthRole",
+      "StackName": "amplify-twitterclone-dev-142615",
+      "StackId": "arn:aws:cloudformation:us-east-1:656396328676:stack/amplify-twitterclone-dev-142615/e8fe77e0-a9d2-11ec-8197-0e55551f00f3",
+      "AmplifyAppId": "d2w48sxnqo1ygq"
+    }
+  },
+  "auth": {
+    "twitterclone6a9f80fb": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "output": {
+        "UserPoolId": "us-east-1_g6ihR9bY9",
+        "AppClientIDWeb": "1ieode7elu8d9i9g7n2h2l47gq",
+        "AppClientID": "4l933n0gfm6if225r31nca2en4",
+        "IdentityPoolId": "us-east-1:365904a3-4e81-4672-815f-d38eba61fe7d",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:656396328676:userpool/us-east-1_g6ihR9bY9",
+        "IdentityPoolName": "twitterclone6a9f80fb_identitypool_6a9f80fb__dev",
+        "UserPoolName": "twitterclone6a9f80fb_userpool_6a9f80fb"
+      },
+      "lastPushTimeStamp": "2022-04-11T20:13:07.226Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-twitterclone-dev-142615-deployment/amplify-cfn-templates/auth/twitterclone6a9f80fb-cloudformation-template.json",
+        "logicalId": "authtwitterclone6a9f80fb"
+      }
+    }
+  },
+  "api": {
+    "twitterclone": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "helogffy2zbotie3vmike5srma",
+        "GraphQLAPIEndpointOutput": "https://h4lrts2afbbbxbvcl6mq5gcuci.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-dh2qzkuscbdwdmunqondnq6yn4"
+      },
+      "lastPushTimeStamp": "2022-04-11T20:13:07.233Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-twitterclone-dev-142615-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apitwitterclone"
+      }
+    }
+  }
+}
